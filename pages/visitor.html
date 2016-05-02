@@ -8,11 +8,11 @@
     <script type="text/javascript" src="visitor.js"></script>
     <style>
         p {
-            color: floralwhite;
+            color: #54542E;
         }
         form {
             width: 300px;
-            height: 80px;
+            height: 100px;
             padding: 50px;
             
         }
@@ -28,19 +28,29 @@
     
     <div id = "first_div" style="display : block">
         <form>
-            이름 : <input type="text" placeholder=" name"><br>
-            <br>
-            생일 : <input type="date" ><br>
+           <table>
+            <tr>
+                <td>이름</td>
+                <td>:</td>
+                <td><input type="text" placeholder=" name"></td>          
+            </tr>
+            <tr>
+                <td>생년월일</td>
+                <td>:</td>
+                <td><input type="date" ></td>
+            </tr>
+            </table>
             <button type="button" onclick="hide_div(first_div, second_div)" >next</button>
         </form>
     </div>
     <div id = "second_div" >
-        <form style="height:180px" > 
+        <form style="height:200px" > 
             <table>
                 <tr>
                     <td>아이디</td>
                     <td>:</td>
-                    <td><input type="text" placeholder=" ID"></td>          </tr>
+                    <td><input type="text" placeholder=" ID"></td>          
+                </tr>
                 <tr>
                     <td>비밀번호</td>
                     <td>:</td>

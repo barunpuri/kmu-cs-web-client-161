@@ -1,5 +1,5 @@
 body{
-    background-color:dimgrey;
+    background-color: #266D61;
     margin: 3%;
     padding : 30px 10% 30px 10%  ; /*상,우,하,좌 */
     text-align: center;
@@ -10,10 +10,12 @@ div {
     border-style: double;
     margin: 30px;
     padding: 30px 0px 30px 0px;
+    background-color: #F0EE89;
 }
 
 h1{
     color: floralwhite;
+
 }
 
 h1>a{
@@ -25,22 +27,23 @@ h2 {
 }
 
 h3 {
-    color: aquamarine
+    color: aquamarine;
 }
 
 h4 {
     text-align: center;
+    color: #311E00;
 }
 
 h5{
     font-size: 18px;
-    color:beige;
+    color:#54542E;
 }
 
 h6>a{
     text-decoration: none;
     text-align: center;
-    color:coral;
+    color:#C9052E;
     font-size: 23px;    
 
 }  
@@ -48,10 +51,10 @@ h6>a{
 form {
     display: inline-block;
     width: 200px;
-    height: 110px;
+    height: 120px;
     margin: 1em;
     border: 2px double black;
-    background-color:darkgrey;
+    background-color: #F0EE89;
 }
 input {
     border: 1px double ;
@@ -76,9 +79,9 @@ body>a {
 details {
     border: double ;
     display: inline-block;
-    background-color:darkslateblue;
-    padding: 10 ;
-    color: white;
+    background-color:#7EF0D2;
+    padding: 10px ;
+    color: #54542E;
     position:absolute;
     right: 1%;
     top: 1%;
@@ -94,7 +97,7 @@ details li {
 
 details a {
     text-align: left;
-    color: yellow;
+    color: #54542E;
     font-size: 14px;
     line-height: 1.3;
 }
@@ -114,6 +117,7 @@ div>table {
 }
 td {
     padding: 10px;
+    color: #C9052E;
     
 }
 
