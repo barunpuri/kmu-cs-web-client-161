@@ -1,12 +1,6 @@
 $('#find').next().hide();
 
-var pair = new Object();
-jQuery.get('id_pw.txt', function (data) {
-    for (var i = 0; i < data.split('\n').length; ++i) {
-        data_pair = JSON.parse(data.split('\n')[i]);
-        pair[data_pair.id] = data_pair.pw;
-    }
-});
+pair={barunpuri:"20153235", test:"test"};
 
 $('#button').click(function () {
     var id = $('#identify').val();
