@@ -5,26 +5,61 @@
     <meta charset="utf-8">
     <title> Project Barunpuri </title>
     <link rel="stylesheet" type="text/css" href="pages/style.css">
-    <script type="text/javascript" src="login.js"></script>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #F0EE89;
+            top: 0px;
+            left: 0px;
+            position: fixed;
+            overflow: hidden;
+            width: 100%;
+            z-index: 10;
+        }
+        
+        li {
+            display: inline;
+            font-family:ubuntu, arial;
+        }
+        
+        li a {
+            display: inline-block;
+            color: crimson;
+            font-size: 15px;
+            text-decoration: none;
+            padding: 20px 16px;
+        }
+        
+        li a:hover {
+            background-color: #C9052E;
+            color: white;
+        }
+    </style>
+
 </head>
 
-<body>
+<body id="top">
+    <nav>
+        <ul align="right">
+            <li style="float:left"><a id="topnav" style="font-size:16px" href="#top">JK's World</a></li>
+            <li><a id="infonav" href="#info">Info</a></li>
+            <li><a id="detailnav" href="#details">Details</a></li>
+            <li><a id="loginnav" href="pages/login.html">Login</a></li>
+        </ul>
+    </nav>
 
-    <img src="pages/file/JK's%20World_ubuntu.png " alt="JK's World">
-    <br>
+    <div id='easter_egg'>
+        <h2>WoW!!! YoU GoT ThE EaStEr EgG!!! </h2>
+        <img src="pages/file/easter_egg.png" width="500px" height="450px">
+        <h2>CliCk MEEEEEE</h2>
+    </div>
 
-    <form>
-       <br>
-        <input name="ID" type="text" placeholder="아이디">
-        <input name="pw" type="password" placeholder="비밀번호">
-        <button type="button" onclick="login(ID.value, pw.value)"> 로그인 </button>
-    </form>
-    <br>
-    <p>
-        첫 방문이세요? <a href="pages/visitor.html">회원가입</a>
-
-    </p>
-
+    <script type="text/javascript" src="easter_egg.js"></script>
 </body>
 
 </html>

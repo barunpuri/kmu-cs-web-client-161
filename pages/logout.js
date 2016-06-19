@@ -1,4 +1,5 @@
 function logout() {
-    window.open("about:blank","_self").close();
-    window.open("../index.html"); 
+    window.open("../index.html");
+    window.open("about:blank", "_self").self.close();
+   
 }

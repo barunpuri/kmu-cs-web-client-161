@@ -1,103 +1,112 @@
 <!DOCTYPE html>
 <html>
-    
+
 <head>
     <title> Project Barunpuri </title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="visitor.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
     <style>
         p {
             color: #54542E;
         }
+        
         form {
             width: 300px;
             height: 100px;
             padding: 50px;
-            
         }
+        
         div {
             display: none;
         }
-        
     </style>
 </head>
 
 <body>
-    <img src="file/JK's%20World_ubuntu.png " alt="JK's World"><br>
-    
-    <div id = "first_div" style="display : block">
+    <img id='titleimg' src="file/JK's%20World_ubuntu.png " alt="JK's World">
+    <br>
+
+    <div id="first_div" style="display : block">
         <form>
-           <table>
-            <tr>
-                <td>이름</td>
-                <td>:</td>
-                <td><input type="text" placeholder=" name"></td>          
-            </tr>
-            <tr>
-                <td>생년월일</td>
-                <td>:</td>
-                <td><input type="date" ></td>
-            </tr>
+            <table>
+                <tr>
+                    <td>이름</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" placeholder=" name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>생년월일</td>
+                    <td>:</td>
+                    <td>
+                        <input type="date">
+                    </td>
+                </tr>
             </table>
-            <button type="button" onclick="hide_div(first_div, second_div)" >next</button>
+            <button type="button" onclick="hide_div(first_div, second_div)">next</button>
         </form>
     </div>
-    <div id = "second_div" >
-        <form style="height:200px" > 
+    <div id="second_div">
+        <form style="height:200px">
             <table>
                 <tr>
                     <td>아이디</td>
                     <td>:</td>
-                    <td><input type="text" placeholder=" ID"></td>          
+                    <td>
+                        <input id="id" type="text" placeholder=" ID">
+                    </td>
                 </tr>
                 <tr>
                     <td>비밀번호</td>
                     <td>:</td>
-                    <td><input type = "password" id="pw"placeholder=" password"></td>
+                    <td>
+                        <input type="password" id="pw" placeholder=" password">
+                    </td>
                 </tr>
                 <tr>
                     <td>비밀번호 확인</td>
                     <td>:</td>
-                    <td><input type = "password" id="pw_conf"placeholder=" password confirm"></td>
+                    <td>
+                        <input type="password" id="pw_conf" placeholder=" password confirm">
+                    </td>
                 </tr>
                 <tr>
                     <td>전화번호</td>
                     <td>:</td>
-                    <td><input type="tel" maxlength="13" placeholder=" 010-1234-5678"></td>
+                    <td>
+                        <input type="tel" maxlength="13" placeholder=" 010-1234-5678">
+                    </td>
                 </tr>
                 <tr>
                     <td>e-mail</td>
                     <td>:</td>
-                    <td><input type="email" placeholder=" test@mail.com"></td>
+                    <td>
+                        <input type="email" placeholder=" test@mail.com">
+                    </td>
                 </tr>
             </table>
-            <button type="button" onclick="check_pw(pw,pw_conf,second_div, final_div)">next</button>
-            
-<!--
-            아이디 : <input type="text" placeholder=" ID"><br>
-            비밀번호 : <input type = "password" id="pw"placeholder=" password"><br>
-            비밀번호 확인 : <input type = "password" id="pw_conf" placeholder=" password confirm"><br>
-            전화번호 : <input type="tel" maxlength="13" placeholder=" 010-1234-5678"><br>
-            e-mail : <input type="email" placeholder=" test@mail.com"><br>
-            <button type="button" onclick="check_pw(pw,pw_conf,second_div, final_div)">next</button>
--->
+            <button id='last' type="button" onclick="check_pw(id,pw,pw_conf,second_div, final_div)">next</button>
+
         </form>
     </div>
-    <div id = "final_div" >
+    <div id="final_div">
         <h5>
             가입에 성공했습니다.<br>
             다음의 아이디로 로그인 하세요.
         </h5>
-        <p>
-           id : barunpuri <br>
-           pw : 20153235 
-        </p>
+
+        <p>ID : <span id="id_out"></span></p>
+        <p>Password : <span id="pw_out"></span></p>
+
         <button type="button" onclick="go_prev_page()">back</button>
     </div>
-    
-    
+
+
+
+    <script type="text/javascript" src="visitor.js"></script>
 </body>
-    
-    
+
+
 </html>
